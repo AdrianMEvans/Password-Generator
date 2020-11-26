@@ -19,7 +19,7 @@ If user length is not within parameters it will not run.
 If user does not confirm any character types then it will not run either. 
 
 ## Conclusion
-Please have a look at **[The Password Factory](https://adrianmevans.github.io/TBC/)** and let me know if there are any questions. I welcome constructive critisism. If you have any suggestions or notice any problems please contact me via the details below.
+Please have a look at **[The Password Factory](https://adrianmevans.github.io/Password-Generator/)** and let me know if there are any questions. I welcome constructive critisism. If you have any suggestions or notice any problems please contact me via the details below.
 
 :bellhop_bell: 
 Contact | Mobile | E-mail
