@@ -1,0 +1,66 @@
+/* h1 Header Styling */
+h1 {
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 3rem;
+  color:whitesmoke;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* h2 Header Styling */
+h2 {
+  border-radius: 5px;
+  padding: 1%;
+  background-color: #2b8f7ed3;
+  /* font-family: 'Montserrat Subrayada', sans-serif;*/
+  text-align: center;
+  font-size: 0.85rem;
+  color: whitesmoke;
+}
+/* Styling the Section Element */
+section{
+  border-radius: 25px;
+  border: solid 1px #cccccc;
+  /* image by Doretti Nicolas from dribble.com */
+  background: url(https://cdn.dribbble.com/users/767646/screenshots/1943981/motion.gif);
+  background-repeat: repeat;
+  background-size: 100%;
+  padding: 5%;
+  width: 95%;
+  margin: auto;
+}
+
+/* Styling the Button Element */
+button {
+  padding: 2% 8%;
+  background: rgb(245, 42, 42);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin: auto;
+  width: 70%;
+  height: 100%;
+}
+
+/* styling the class = container */
+.container {
+  border-radius: 25px;
+  background-color: #2B8C7C;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+#password {
+  display: block;
+  margin: 0;
+  height: 100px;
+  width: 100%;
+  border: dashed 3px #FD5459;
+  background-color: #e8dad7d3;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 6%;
+}
