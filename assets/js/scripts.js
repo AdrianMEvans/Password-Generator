@@ -41,6 +41,38 @@ let charLength = prompt("Select the length of your desired password - must be va
         let includeNumbers = confirm("Shall we include Numbers in your Password?");
         let includeSymbols = confirm("Shall we include Symbols in your Password?");
 
+        //create if statments that loops for every combination of passwords characters
+        if ((includeSymbols === true) && (includeNumbers === true) && (includeLowerCase === true) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * allCharacters.length);
+                newPassword += allCharacters.charAt(character, character + 1);
+            }
+        // create if statememts that loops for single character sets selected ie symbols || numbers || lowercase || uppercase    
+        }
+        else if ((includeSymbols === false) && (includeNumbers === false) && (includeLowerCase === true) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * lowerCase.length);
+                newPassword += lowerCase.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === false) && (includeLowerCase === false) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * upperCase.length);
+                newPassword += upperCase.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === true) && (includeLowerCase === false) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * numbers.length);
+                newPassword += numbers.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === true) && (includeNumbers === false) && (includeLowerCase === false) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * symbols.length);
+                newPassword += symbols.charAt(character, character + 1);
+            }
+
 })
 
 /* PseudoCode
