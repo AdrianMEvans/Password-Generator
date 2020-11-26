@@ -5,10 +5,10 @@ let btncreateEl = document.querySelector("#generate");
 //Create EventListener for clicking on button
 btncreateEl.addEventListener("click", function () {
    
-//First Prompt to obtain the required character length that must be between 8 - 128 characters
-let charLength = prompt("Select the length of your desired password - must be value between 8 and 128.");
+    //First Prompt to obtain the required character length that must be between 8 - 128 characters
+    let charLength = prompt("Select the length of your desired password - must be value between 8 and 128.");
 
-//If the Character length specified is correct then run the function
+    //If the Character length specified is correct then run the function
     if ((charLength < 8) || (charLength > 128)) {
         alert("Please select value 8 - 128");
     } else { ((charLength > 7) && (charLength < 129)) 
@@ -73,9 +73,79 @@ let charLength = prompt("Select the length of your desired password - must be va
                 newPassword += symbols.charAt(character, character + 1);
             }
 
+            // Create loops for Combo Character options selected
+        }
+        else if ((includeSymbols === true) && (includeNumbers === true) && (includeLowerCase === true) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() *combo1.length);
+                newPassword += combo1.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === true) && (includeNumbers === true) && (includeLowerCase === false) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo2.length);
+                newPassword += combo2.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === true) && (includeNumbers === false) && (includeLowerCase === true) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo3.length);
+                newPassword += combo3.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === true) && (includeLowerCase === true) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo4.length);
+                newPassword += combo4.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === true) && (includeNumbers === true) && (includeLowerCase === false) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo5.length);
+                newPassword += combo5.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === true) && (includeNumbers === false) && (includeLowerCase === true) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo6.length);
+                newPassword += combo6.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === true) && (includeNumbers === false) && (includeLowerCase === false) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo7.length);
+                newPassword += combo7.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === true) && (includeLowerCase === true) && (includeUpperCase === false)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo8.length);
+                newPassword += combo8.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === true) && (includeLowerCase === false) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo9.length);
+                newPassword += combo9.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === false) && (includeLowerCase === true) && (includeUpperCase === true)) {
+            for (i = 0; i < charLength; i++) {
+                let character = Math.floor(Math.random() * combo10.length);
+                newPassword += combo10.charAt(character, character + 1);
+            }
+        }
+        else if ((includeSymbols === false) && (includeNumbers === false) && (includeLowerCase === false) && (includeUpperCase === false)) {
+            alert("Please Select At Least One Type");
+            }
+
+        //Create the newPassword to be displayed in the textArea
+        passwordEl.textContent = newPassword;
+    }
+
 })
 
-/* PseudoCode
+// PseudoCode
 // Need to create var setting the Elements that will be used to create NewPassword and that will be used to Start the prompts for the EventListener.
 // Create an EventListener based on the clicking of the button that will then initiate a serious of promtps.
 // The First Prompt will be used to to obtain the required character length for the password. This must be between 8 - 128 characters.
@@ -87,4 +157,4 @@ let charLength = prompt("Select the length of your desired password - must be va
 // Create if statments that loops for every combination of passwords characters using random.math and limit to character length as per var from first prompt and made up from relevant variable or variable combo.
 // Create if statememts that loops for single character sets selected ie symbols || numbers || lowercase || uppercase    
 // Create if statememts that loops for Combo Character options selected ie combo 1 || combo 2 || combo 3 etc.
-// The results from the function will then be used to create the newPassword to be displayed in the textArea */
+// The results from the function will then be used to create the newPassword to be displayed in the textArea 
