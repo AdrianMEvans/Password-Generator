@@ -8,6 +8,38 @@ btncreateEl.addEventListener("click", function () {
 //First Prompt to obtain the required character length that must be between 8 - 128 characters
 let charLength = prompt("Select the length of your desired password - must be value between 8 and 128.");
 
+//If the Character length specified is correct then run the function
+    if ((charLength < 8) || (charLength > 128)) {
+        alert("Please select value 8 - 128");
+    } else { ((charLength > 7) && (charLength < 129)) 
+
+        //variables available for the Password Generator TextArea 
+        let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let numbers = "1234567890";
+        let symbols = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";  
+
+        //set a blank string for the new password to be generated in
+        let newPassword = "";
+
+        //create variables that embody all the possible different combinations 
+        let allCharacters = symbols + numbers + lowerCase + upperCase;
+        let combo1 = symbols + numbers + lowerCase;
+        let combo2 = symbols + numbers + upperCase;
+        let combo3 = symbols + lowerCase + upperCase;
+        let combo4 = numbers + lowerCase + upperCase;
+        let combo5 = symbols + numbers;
+        let combo6 = symbols + lowerCase;
+        let combo7 = symbols + upperCase;
+        let combo8 = numbers + lowerCase;
+        let combo9 = numbers + upperCase;
+        let combo10 = lowerCase + upperCase;
+
+        //prompt user with what character types they wish their password to include
+        let includeLowerCase = confirm("Shall we include lower case letters in your Password?");
+        let includeUpperCase = confirm("Shall we include UPPER CASE LETTERS in your Password?");
+        let includeNumbers = confirm("Shall we include Numbers in your Password?");
+        let includeSymbols = confirm("Shall we include Symbols in your Password?");
 
 })
 
