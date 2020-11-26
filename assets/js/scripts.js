@@ -1,3 +1,13 @@
+//create variables
+let passwordEl = document.querySelector("#password");
+let btncreateEl = document.querySelector("#generate");
+
+//Create EventListener for clicking on button
+btncreateEl.addEventListener("click", function () {
+   
+//First Prompt to obtain the required character length that must be between 8 - 128 characters
+let charLength = prompt("Select the length of your desired password - must be value between 8 and 128.");
+
 
 // PseudoCode
 // Need to create var setting the Elements that will be used to create NewPassword and that will be used to Start the prompts for the EventListener.
